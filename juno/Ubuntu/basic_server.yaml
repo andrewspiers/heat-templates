@@ -1,3 +1,9 @@
+#Can Add User Data
+#user_data: {default: '', description: User data script to be executed by cloud-init.,
+#  immutable: false, required: false, type: string, update_allowed: false}
+
+
+
 # Juno Release
 heat_template_version: 2014-10-16
 
@@ -49,6 +55,10 @@ resources:
             flavor: { get_param: instance_type }
             image_update_policy: REPLACE
             user_data_format: RAW
+            # YOU CAN ADD USER DATA HERE! EG 
+                #user_data: {default: '', description: User data script to be executed by cloud-init.,
+                #immutable: false, required: false, type: string, update_allowed: false}
+
 
     
 outputs:
